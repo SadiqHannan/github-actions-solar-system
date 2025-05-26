@@ -91,7 +91,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/solar-system:${{ github.sha }}
+          tags: |
+            ghcr.io/sadiqhannan/github-actions-solar-system:${{ github.sha }}
+            ghcr.io/sadiqhannan/github-actions-solar-system:latest
 
   dev-deploy:
     name: Development Deployment
